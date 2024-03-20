@@ -1,0 +1,17 @@
+{
+    "project_name": "Vitua Virtual Desktop",
+    "project_url": "http:\/\/vitua-dev.net:9010",
+    "project_port": "9010",
+    "factory_name": "vitua",
+    "framework_url": "https:\/\/humbleprogramming.com",
+    "module": "Vitua",
+    "namespace": "vitua",
+    "package": "Main",
+    "landing_page": "\/vitua\/home\/page",
+    "author": "rick@humbleprogramming.com",
+    "name": "Rick Myers",
+    "hub_port": "",
+    "fpm": "",
+    "destination_folder": "E:\\var\\www\\TBD",
+    "serial_number": "VHZA-EBKO-CJGZ-GTGK"
+}

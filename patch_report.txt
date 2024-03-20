@@ -1,0 +1,39 @@
+
+PATCH REPORT
+########################################################
+
+Matched Files: 2194
+
+The following files will be updated by this process:
+
+
+The following files are on the local manifest indicating they should be IGNORED in the patch:
+
+00001) index.html
+00002) app/allowed.json
+00003) app/Humble.local.manifest
+00004) app/Constants.php
+
+The following files are on the local manifest indicating they should be MERGED in the patch:
+
+
+The following files will be patched:
+
+00001) .htaccess
+00002) .gitignore
+
+The following files are new and will be inserted by this patch:
+
+00001) app/Code/Framework/Paradigm/Views/designer/Smarty3/save.tpl
+00002) app/Code/Framework/Paradigm/Views/test/Twig/list.twig
+00003) app/Code/Framework/Paradigm/Views/webservice/Smarty3/activate.tpl
+00004) app/Code/Framework/Paradigm/Views/sensor/Smarty3/listen.tpl
+00005) app/Code/Framework/Paradigm/Views/diagram/Smarty3/import.tpl
+00006) app/Code/Framework/Paradigm/Views/projects/Twig/list.twig
+00007) app/Code/Framework/Workflow/web/edits/mail.json
+00008) app/Code/Framework/Workflow/Views/default/Smarty3/begin.tpl
+00009) app/Code/Framework/Workflow/Views/sensor/Smarty3/save.tpl
+00010) app/Code/Framework/Workflow/Views/xml/Smarty3/translate.tpl
+00011) app/Code/Framework/Workflow/Views/ftp/Smarty3/get.tpl
+00012) app/Code/Framework/Admin/Views/secrets/Smarty3/add.tpl
+00013) app/Code/Framework/Admin/Views/password/Twig/form.twig

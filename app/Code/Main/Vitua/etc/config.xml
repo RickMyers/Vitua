@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<config>
+    <vitua>
+        <version>0.0.1</version>
+        <title>Vitua<!-- This will appear in the administration screens for this module --></title>
+        <description>The Vitua module<!-- This will appear in the admin page --></description>
+        <author>
+            <name>rick@humbleprogramming.com</name>
+            <email/>
+        </author>
+        <module>
+            <name>Vitua</name>
+            <weight>50</weight>
+            <required>Y</required>
+            <workflow>Y</workflow>
+            <package>Main</package>
+            <use>Smarty3</use>
+        </module>
+        <structure>
+            <models>
+                <source>Vitua/Models</source>
+            </models>
+            <helpers>
+                <source>Vitua/Helpers</source>
+            </helpers>
+            <controllers>
+                <source>Vitua/Controllers</source>
+                <cache>Vitua/Controllers/Cache</cache>
+            </controllers>
+            <mobile>
+                <controllers>
+                    <source>Vitua/Mobile/Controllers</source>
+                    <cache>Vitua/Mobile/Controllers/Cache</cache>
+                </controllers>
+                <views>
+                    <source>Vitua/Mobile/Views</source>
+                    <cache>Vitua/Mobile/Views/Cache</cache>
+                </views>
+            </mobile>
+            <schema>
+                <install>Vitua/Schema/Install</install>
+                <update>Vitua/Schema/Update</update>
+                <layout>Vitua/Schema/DSL</layout>
+            </schema>
+            <configuration>
+                <source>Vitua/etc</source>
+            </configuration>
+            <views>
+                <source>Vitua/Views</source>
+                <cache>Vitua/Views/Cache</cache>
+            </views>
+            <images>
+                <source>Vitua/Images</source>
+                <cache>Vitua/Images/Cache</cache>
+            </images>
+            <entities>
+                <source>Vitua/Entities</source>
+            </entities>
+            <RPC>
+                <source>Vitua/RPC</source>
+            </RPC>
+            <frontend>
+                <source>Vitua/web/app</source>
+            </frontend>
+        </structure>
+        <extend comment="Means whether to look up the Module hierarchy if a specific class is not found (if not found in current module, perhaps the class is in a parent module)">
+            <helpers>1</helpers>
+            <models>1</models>
+            <entities>1</entities>
+        </extend>     
+        <orm>
+            <prefix>vitua_</prefix>
+            <mongodb>vitua</mongodb>
+            <!--
+                Register your tables to be managed under this namespace in the entities section below in the following format:
+
+                <table_name polyglot="Y' />
+
+                The 'polyglot' attribute is optional.  Only specify when you are actually enabling the polyglot behavior
+            -->
+            <entities>
+
+            <users/><user_identification polyglot="Y"/></entities>
+        </orm>
+        <events>
+
+        </events>
+        <web>
+            <!-- Edits are used for separating form validation from the form -->
+            <edits>
+                <edit1>Vitua/web/edits/edit.json</edit1>
+            </edits>
+            <hook>
+                <!-- #################################################
+                     This is where the JS lives for your module
+
+                     Set the 'hook' name appropriately, and use as
+                       many hooks as you'd like
+                     #################################################    -->
+                <js>
+                    <source>Vitua/web/js/Vitua.js</source>
+                </js>
+                <css>
+                    <source>Vitua/web/css/Vitua.css</source>
+                </css>
+            </hook>
+        </web>
+    </vitua>
+</config>
