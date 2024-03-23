@@ -43,12 +43,13 @@
     </documentation>
     <flags>
         <!-- You can insert custom flags here, and query them at runtime -->
+        <xbithack>1</xbithack>
         <display_mysql_errors comment="Mysql error are always logged but do you want them displayed on the page as well?">0</display_mysql_errors>
         <redis comment="Use redis instead of memcache for the cache">0</redis>
     </flags>    
     <support>
-        <name>{$support_name}</name>
-        <email>{$support_email}</email>
+        <name>Rick Myers</name>
+        <email>rick@humbleprogramming.com</email>
     </support>    
     <status>
         <enabled>1</enabled>           <!-- Switch to 0 to take the application offline -->
