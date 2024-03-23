@@ -1,0 +1,56 @@
+
+version: "3.3"
+
+#####################################
+#SERVICES
+#####################################
+services:
+  php-apache-environment:
+    container_name: vitua
+    image: vitua
+    volumes:
+      - "vitua_settings:/var/www/Settings"
+      - "E:/var/www/Vitua:/var/www/html"
+      - vitua_web_cfg:/etc
+    ports:
+      - 9010:9010
+    expose:
+      - 9003
+      
+  mysql:
+    image: mysql:5.7
+    container_name: vitua_mysql
+    restart: unless-stopped
+    ports:
+      - 3316:3306
+    volumes:
+      - vitua_db_data:/var/lib/mysql
+      - vitua_mysql_cfg:/etc
+    ############################################################################
+    # PROVIDE MySQL AUTH VALUES BELOW BEFORE RUNNING!
+    ############################################################################
+    environment:
+      MYSQL_ROOT_PASSWORD: password123
+      MYSQL_DATABASE: vitua
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: password123
+    
+  mongodb:
+    image: mongo:latest
+    container_name: vitua_mongodb
+    restart: unless-stopped
+    ports:
+      - 27117:27017
+    volumes:
+      - vitua_mongodb_cfg:/etc
+      - vitua_mongodb_data:/data/db 
+volumes:
+  vitua_db_data:
+  vitua_mongodb_data:
+  vitua_mysql_cfg:  
+  vitua_mongodb_cfg:
+  vitua_web_cfg:
+  vitua_logs:
+  vitua_settings:
+      
+

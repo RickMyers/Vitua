@@ -5,7 +5,6 @@ app/cli/Framework/*
 app/cli/System/*
 app/cli/Module/*
 Docs/*
-Docker/*
 /images/*
 /app/allowed.json
 /app/Constants.php
