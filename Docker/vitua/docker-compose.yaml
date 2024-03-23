@@ -33,7 +33,7 @@ services:
       MYSQL_ROOT_PASSWORD: password123
       MYSQL_DATABASE: vitua
       MYSQL_USER: appuser
-      MYSQL_PASSWORD: password123
+      MYSQL_PASSWORD: [ENTER PASSWORD HERE]
     
   mongodb:
     image: mongo:latest
